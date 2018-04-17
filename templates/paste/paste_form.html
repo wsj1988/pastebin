@@ -1,0 +1,17 @@
+{% extends "paste/base.html" %}
+
+{% block title %}新增{% endblock %}
+
+{% block content %}
+<h2>随心贴</h2>
+<form action="" method="POST">
+    {% csrf_token %}
+    <span class="form">
+        标题：{{ form.title }}	<br>
+	作者：{{ form.poster }} <br>
+	语言：{{ form.syntax }} <br>
+	{{ form.content }} <br>
+	<input type="submit" name="submit" value="粘贴" id="submit">
+    </span>
+</form>
+{% endblock %}
